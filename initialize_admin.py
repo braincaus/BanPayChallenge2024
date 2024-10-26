@@ -9,10 +9,10 @@ users_collection = db["users"]
 
 admin_exists = users_collection.find_one({"role": "admin"})
 if not admin_exists:
-    hashed_password = get_password_hash("alaska87")
+    hashed_password = get_password_hash("adminpass")
     new_admin = UserInDB(
         username="admin",
-        email="efrain@romesistemas.mx",
+        email="admin@romesistemas.mx",
         password_hash=hashed_password,
         role="admin"
     )
